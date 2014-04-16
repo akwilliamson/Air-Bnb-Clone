@@ -1,0 +1,7 @@
+<h3>Your existin listins</h3>
+<ul>
+  <% @user.listings.each do |listing| %>
+    <li><%= listing.address %> | <%= listing.description %> | <%= link_to "Edit Listing", edit_listing_path(listing)%></li>
+  <% end %>
+</ul>
+<%= link_to "Post new Listing", new_listing_path, class: 'btn btn-alert' %>

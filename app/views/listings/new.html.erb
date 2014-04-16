@@ -1,0 +1,20 @@
+  <% if @listing.errors.any? %>
+    <h2>Form is invalid</h2>
+      <ul>
+        <% @listing.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+  <% end %>
+<%= form_for @listing do |f| %>
+  <%= f.label :address %><br>
+  <%= f.text_field :address %><br>
+
+  <%= f.label :description %><br>
+  <%= f.text_area :description %><br>
+
+  <%= f.label :photo %>
+  <%= f.file_field :photo %>
+
+  <%= f.submit 'Add listing' %>
+<% end %>

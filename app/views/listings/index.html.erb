@@ -1,0 +1,3 @@
+<% @listings.each do |listing| %>
+  <%= listing.description%>  | <%=listing.address%> | <%= time_ago_in_words(listing.created_at) %>
+<% end %>
