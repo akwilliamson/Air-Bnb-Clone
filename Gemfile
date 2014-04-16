@@ -6,11 +6,11 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'letter_opener'
 gem 'paperclip'
+gem 'textacular'
 
 
 group :development do

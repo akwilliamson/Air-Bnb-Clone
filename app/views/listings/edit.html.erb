@@ -18,3 +18,6 @@
 
   <%= f.submit 'Update listing' %>
 <% end %>
+</br>
+
+<%= link_to "Delete Listing", listing_path(@listing), method: :delete, class: 'btn btn-danger' %>

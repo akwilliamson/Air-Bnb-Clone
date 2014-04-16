@@ -1,0 +1,10 @@
+<ul class="listingList">
+  <% @listings.each do |listing| %>
+    <li class="listing"> <%= image_tag listing.photo.url(:small) %>
+      <% if listing.user == current_user %>
+        <%= listing.address %> | <%= listing.description %> | <%= link_to "Edit Listing", edit_listing_path(listing)%></li>
+      <% else %>
+        <%= listing.address %> | <%= listing.description %>
+      <% end %>
+  <% end %>
+</ul>

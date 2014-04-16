@@ -1,7 +1,15 @@
 class ListingsController < ApplicationController
 
   def index
-    @listings = Listing.find(:all, :order => 'created_at').reverse
+    respond_to do |format|
+      format.html { @listings = Listing.all }
+      format.js {@listings = Listing.basic_search(params[:search])}
+    end
+  end
+
+  def destroy
+    Listing.find(params[:id]).destroy
+    redirect_to root_path
   end
 
   def new
