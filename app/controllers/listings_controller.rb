@@ -7,6 +7,13 @@ class ListingsController < ApplicationController
     end
   end
 
+  def show
+    @date = params[:month] ? Date.parse(params[:month]) : Date.today
+    @listing = Listing.find(params[:id])
+    @booking = Booking.new
+    @bookings = @listing.bookings
+  end
+
   def destroy
     Listing.find(params[:id]).destroy
     redirect_to root_path

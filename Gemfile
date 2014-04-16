@@ -11,6 +11,7 @@ gem 'bootstrap-sass'
 gem 'letter_opener'
 gem 'paperclip'
 gem 'textacular'
+gem "watu_table_builder", :require => "table_builder"
 
 
 group :development do
