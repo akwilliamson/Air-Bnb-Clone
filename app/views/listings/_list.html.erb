@@ -4,7 +4,7 @@
       <% if listing.user == current_user %>
         <%= listing.address %> | <%= listing.description %> | <%= link_to "Edit Listing", edit_listing_path(listing)%></li>
       <% else %>
-        <%= listing.address %> | <%= listing.description %>
+        <%= listing.address %> | <%= listing.description %> | <%= link_to "Book Listing", listing_path(listing) %>
       <% end %>
   <% end %>
 </ul>
