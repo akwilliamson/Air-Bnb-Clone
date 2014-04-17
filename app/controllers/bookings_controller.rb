@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
+
     if @booking.save
       @booking.update(user_id: current_user.id)
       flash[:notice] = "Booked! Enjoy your stay from #{@booking.start_date} to #{@booking.end_date}"

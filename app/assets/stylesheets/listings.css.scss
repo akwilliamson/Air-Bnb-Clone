@@ -16,10 +16,16 @@ form{
   float:left;
   padding-bottom: 5%;
 }
+#bookingCol{
+  clear:both;
+}
 
 #calendar table {
   border-collapse: collapse;
   width: 100%;
+}
+#listPic{
+  float:left;
 }
 
 #calendar td,
