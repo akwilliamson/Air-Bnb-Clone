@@ -25,13 +25,14 @@
         <%= link_to ">", :month => (@date.end_of_month+1).strftime("%Y-%m-01") %>
       </h2>
       <%= calendar_for @bookings do |c| %>
+
         <%= c.head("Monday","Tuseday","Wednesday","Thursday","Friday","Saturday","Sunday") %>
         <%= c.day(:day_method => :start_date) do |d, booking| %>
           <%= d.day %>
             <ul>
               <% for booking in @bookings %>
-                <% if booking.date_range.include?(d) %>
-                  <li class="red"> Reserved </li>
+                <% if booking.date_range.include?(d) && booking.booking_months.include?(d.month) %>
+                  <li class="red"> Reserved <%= d.month %></li>
                 <% end %>
               <% end %>
             </ul>

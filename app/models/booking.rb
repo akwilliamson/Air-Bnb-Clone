@@ -8,4 +8,12 @@ class Booking < ActiveRecord::Base
   def date_range
     (self.start_date..self.end_date).to_a
   end
+
+  def booking_months
+    months =[]
+    (self.start_date..self.end_date).to_a.each do |d|
+      months << d.month
+    end
+  months.uniq
+  end
 end
