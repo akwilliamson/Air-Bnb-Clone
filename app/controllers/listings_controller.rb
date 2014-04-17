@@ -8,9 +8,7 @@ class ListingsController < ApplicationController
   end
 
   def show
-    if params[:month]
-      @month = params[:month]
-    end
+
     @date = params[:month] ? Date.parse(params[:month]) : Date.today
 
     @listing = Listing.find(params[:id])
