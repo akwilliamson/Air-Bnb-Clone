@@ -32,7 +32,7 @@
             <ul>
               <% for booking in @bookings %>
                 <% if booking.date_range.include?(d) && booking.booking_months.include?(d.month) %>
-                  <li class="red"> Reserved <%= d.month %></li>
+                  <li class="red"> Reserved </li>
                 <% end %>
               <% end %>
             </ul>
