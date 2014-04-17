@@ -76,9 +76,12 @@ GEM
     jquery-rails (3.1.0)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    jquery-star-rating-rails (4.0.4)
+      rails (>= 3.1.0)
     json (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
+    letsrate (1.0.9)
     letter_opener (1.2.0)
       launchy (~> 2.2)
     mail (2.5.4)
@@ -177,7 +180,9 @@ DEPENDENCIES
   factory_girl_rails
   faker
   jquery-rails
+  jquery-star-rating-rails
   launchy
+  letsrate
   letter_opener
   paperclip
   pg
